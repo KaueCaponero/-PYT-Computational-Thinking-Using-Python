@@ -15,5 +15,5 @@ i = b
 
 while (i >= a):
     tab = x * i
-    print(tab)
+    print(x, "x", i, "=", tab)
     i = i - 1

@@ -15,5 +15,5 @@ i = b
 
 for i in range(b,(a-1),-1):
     tab = x * i
-    print(tab)
+    print(x, "x", i, "=", tab)
     i = i - 1
