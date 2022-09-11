@@ -3,7 +3,7 @@ a1 = 1
 an = 1
 indice = 1
 
-while (indice <=20):
+while (indice <=20) :
 
     while (indice <= 3):
         print(f"{indice}. {an}")

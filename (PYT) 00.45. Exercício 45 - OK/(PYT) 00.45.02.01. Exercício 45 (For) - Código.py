@@ -34,7 +34,7 @@ for i in range (1, n+1, 1):
     soma = soma + x
 
 media = soma / n
-porcneg = 100 * xneg / n
+porcneg = 100 *xneg / n
 porcpos = 100 * xpos / n
 porcnul = 100 * x0 / n
 

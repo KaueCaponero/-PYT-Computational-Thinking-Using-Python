@@ -36,7 +36,7 @@ while (i <= n):
     i = i + 1
 
 media = soma / n
-porcneg = 100 * xneg / n
+porcneg = 100 *xneg / n
 porcpos = 100 * xpos / n
 porcnul = 100 * x0 / n
 
