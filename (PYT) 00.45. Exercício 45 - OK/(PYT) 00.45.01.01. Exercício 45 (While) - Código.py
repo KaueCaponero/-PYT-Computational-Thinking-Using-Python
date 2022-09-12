@@ -1,44 +1,60 @@
-n = int(input("Quantos números você irá digitar? (1 até 19) "))
+n = int(input("Digite a quantidade de números a ser comparada (deve ser maior que 0 e menor que 20): "))
 
-while ( n < 1 or n > 19):
-    print("Número inválido. O número digitado deve estar entre 1 e 19.")
-    n = int(input("Quantos números você irá digitar? (1 até 19) "))
+while (n <= 0) or (n >= 20):
+    print("Valor inválido.")
+    n = int(input("Digite a quantidade de números a ser comparada (deve ser maior que 0 e menor que 20): "))
 
 i = 1
-soma = 0
-xneg = 0
 xpos = 0
+xneg = 0
+xnul = 0
+soma = 0
 maior = 0
 menor = 0
-x0 = 0
 
 while (i <= n):
-    x = int(input(f'Digite o {i}º número: '))
+    x = int(input(f"Digite o {i}º número: "))
 
-    if (x < 0):
-        xneg = xneg + 1
-        if (x < menor):
-            menor = x
-        elif (x > maior):
-            maior = x
-
-    elif (x > 0):
-        xpos = xpos + 1
-        if (x < menor):
-            menor = x
-        elif (x > maior):
-            maior = x
-
+    if (i == 1):
+        maior = x
+        menor = x
+        if (x > 0):
+            xpos = xpos + 1
+        elif (x < 0):
+            xneg = xneg + 1
+        else:
+            xnul = xnul + 1
+    elif (x > maior):
+        maior = x
+        if (x > 0):
+            xpos = xpos + 1
+        elif (x < 0):
+            xneg = xneg + 1
+        else:
+            xnul = xnul + 1
+    elif (x < menor):
+        menor = x
+        if (x > 0):
+            xpos = xpos + 1
+        elif (x < 0):
+            xneg = xneg + 1
+        else:
+            xnul = xnul + 1
     else:
-        x0 = x0 + 1
+        if (x > 0):
+            xpos = xpos + 1
+        elif (x < 0):
+            xneg = xneg + 1
+        else:
+            xnul = xnul + 1
     
     soma = soma + x
-    i = i + 1
+    i = i + 1    
 
 media = soma / n
-porcneg = 100 *xneg / n
-porcpos = 100 * xpos / n
-porcnul = 100 * x0 / n
+porcpos = (100 * xpos) / n
+porcneg = (100 * xneg) / n
+porcnul = (100 * xnul) / n
 
 print('O maior valor é: %.2f' %maior)
 print('O menor valor é: %.2f' %menor)
