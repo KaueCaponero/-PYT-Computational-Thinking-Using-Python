@@ -17,3 +17,25 @@ for i in range (0,20,1):
                 vetor[i] = prox
 
 print(vetor)
+
+
+"""
+Correção:
+
+numeros = []
+
+for i in range (0,5,1):
+    num = input("Digite um número")
+    numeros.append(num)
+
+for i in range (0,5,1):
+    for j in range (i+1,5,1):
+        if (numeros[i] < numeros[j]):
+            aux = numeros[i]
+            numeros[i] = numeros[j]
+            numeros[j] = aux
+
+for i in range (0,5,1):
+    print(numeros[i])
+
+"""
